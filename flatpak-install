@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set -eux
+flatpak-builder --user --install --force-clean build-dir org.marler.gl-alpha-test.yml

@@ -1,0 +1,19 @@
+id: org.marler.gl-alpha-test
+runtime: org.gnome.Platform
+runtime-version: '45'
+sdk: org.gnome.Sdk
+finish-args:
+  - '--socket=x11'
+  - '--socket=wayland'
+  - '--device=all'
+command: gl-alpha-test
+modules:
+  - name: gl-alpha-test
+    buildsystem: cmake
+    sources:
+      - type: file
+        path: build
+      - type: file
+        path: gl-alpha-test.c
+      - type: file
+        path: CMakeLists.txt

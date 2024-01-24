@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+set -eux
+if [ ! -e out/build.ninja ]; then
+    cmake -B out -S . -GNinja
+fi
+ninja -C out
